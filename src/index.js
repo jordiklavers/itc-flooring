@@ -117,6 +117,7 @@ function initScrollTriggerAnimations() {
     let headingSplit = SplitText.create(".h-display", {
       mask: "lines",
     });
+    let heroImage = $(this).find(".background-img__img");
 
     let triggerElement = $(this);
     let heading = $(this).find(".h-display");
@@ -130,10 +131,16 @@ function initScrollTriggerAnimations() {
       },
     });
 
+    tl.to(heroImage, {
+      scale: 1.15,
+      duration: 0.875,
+      ease: "linear",
+    }, "<");
+
     tl.to(triggerElement, {
       ease: "none",
       clipPath: "inset(0% 0% 20% 0%)",
-    });
+    }, "<");
 
     tl.to(
       headingSplit.lines,

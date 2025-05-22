@@ -49,7 +49,51 @@
   color: white;
 }
 
-/* ---- Button Component ---- */
+/* Navigatie Links Hover */
+
+.nav:has(.nav__link:hover) .nav__link:not(:hover) {
+  opacity: 0.7;
+}
+
+.nav__link {
+  position: relative;
+  transition: opacity 0.3s
+}
+
+.nav__link-text {
+  transition: transform 0.5s var(--elastic-ease-out);
+}
+.nav__link:after {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: currentcolor;
+  transform: translateX(-50%) translateY(1rem) scale(0);
+  transition: transform 0.5s var(--elastic-ease-out);
+}
+
+.nav__link:hover:after {
+  transform: translateX(-50%) translateY(0.5rem) scale(1);
+}
+
+.nav__link:hover .nav__link-text {
+  transform: translateY(-0.25rem);
+}
+
+.nav__link:active .nav__link-text {
+  transform: translateY(0rem);
+}
+
+
+
+/* ---------------- BUTTON COMPONENTS ---------------- */
+
+
+/* ---- Primary Button ---- */
 .btn {
   --elastic-ease-out: linear(
     0,
@@ -99,7 +143,7 @@
 }
 
 /* Active State */
-.btn:active {
+.btn:active, .form-submit__small:active {
   transform: scale(0.9);
 }
 
@@ -124,4 +168,92 @@
 
 .btn:hover .btn__icon.is-second {
   transform: scale(0.5);
+}
+
+/* ---- Button Link ---- */
+
+.btn-link {
+  --elastic-ease-out: linear(
+    0,
+    0.5737 7.6%,
+    0.8382 11.87%,
+    0.9463 14.19%,
+    1.0292 16.54%,
+    1.0886 18.97%,
+    1.1258 21.53%,
+    1.137 22.97%,
+    1.1424 24.48%,
+    1.1423 26.1%,
+    1.1366 27.86%,
+    1.1165 31.01%,
+    1.0507 38.62%,
+    1.0219 42.57%,
+    0.9995 46.99%,
+    0.9872 51.63%,
+    0.9842 58.77%,
+    1.0011 81.26%,
+    1
+  );
+  --animation-duration: 0.8s;
+  transition: transform var(--animation-duration) var(--elastic-ease-out);
+}
+
+.btn-link .btn-link__icon {
+  overflow: clip;
+}
+
+.btn-link .btn-link__content {
+  transition: transform var(--animation-duration) var(--elastic-ease-out);
+}
+
+.btn-link .btn__icon-svg {
+  filter: drop-shadow( -2.5rem 0px 0px currentcolor);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-link:hover .btn-link__content {
+    transform: translateX(1rem);
+  }
+ 
+  .btn-link:hover .btn__icon-svg {
+    transform: translateX(2.5rem);
+  }
+}
+
+
+/* ---- Form Small Button ---- */
+
+.form-submit__small {
+  --elastic-ease-out: linear(
+    0,
+    0.5737 7.6%,
+    0.8382 11.87%,
+    0.9463 14.19%,
+    1.0292 16.54%,
+    1.0886 18.97%,
+    1.1258 21.53%,
+    1.137 22.97%,
+    1.1424 24.48%,
+    1.1423 26.1%,
+    1.1366 27.86%,
+    1.1165 31.01%,
+    1.0507 38.62%,
+    1.0219 42.57%,
+    0.9995 46.99%,
+    0.9872 51.63%,
+    0.9842 58.77%,
+    1.0011 81.26%,
+    1
+  );
+  --animation-duration: 0.8s;
+  transition: transform var(--animation-duration) var(--elastic-ease-out);
+  overflow: clip;
+}
+
+.form-submit__small .btn__icon-svg {
+  filter: drop-shadow( -2.5rem 0px 0px currentcolor);
+}
+
+.form-submit__small:hover .btn__icon-svg {
+  transform: translateX(2.5rem);
 }
