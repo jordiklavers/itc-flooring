@@ -57,7 +57,7 @@
 
 .nav__link {
   position: relative;
-  transition: opacity 0.3s
+  transition: opacity 0.3s;
 }
 
 .nav__link-text {
@@ -88,10 +88,7 @@
   transform: translateY(0rem);
 }
 
-
-
 /* ---------------- BUTTON COMPONENTS ---------------- */
-
 
 /* ---- Primary Button ---- */
 .btn {
@@ -143,7 +140,8 @@
 }
 
 /* Active State */
-.btn:active, .form-submit__small:active {
+.btn:active,
+.form-submit__small:active {
   transform: scale(0.9);
 }
 
@@ -207,19 +205,18 @@
 }
 
 .btn-link .btn__icon-svg {
-  filter: drop-shadow( -2.5rem 0px 0px currentcolor);
+  filter: drop-shadow(-2.5rem 0px 0px currentcolor);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .btn-link:hover .btn-link__content {
     transform: translateX(1rem);
   }
- 
+
   .btn-link:hover .btn__icon-svg {
     transform: translateX(2.5rem);
   }
 }
-
 
 /* ---- Form Small Button ---- */
 
@@ -251,7 +248,7 @@
 }
 
 .form-submit__small .btn__icon-svg {
-  filter: drop-shadow( -2.5rem 0px 0px currentcolor);
+  filter: drop-shadow(-2.5rem 0px 0px currentcolor);
 }
 
 .form-submit__small:hover .btn__icon-svg {

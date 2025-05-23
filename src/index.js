@@ -131,16 +131,24 @@ function initScrollTriggerAnimations() {
       },
     });
 
-    tl.to(heroImage, {
-      scale: 1.15,
-      duration: 0.875,
-      ease: "linear",
-    }, "<");
+    tl.to(
+      heroImage,
+      {
+        scale: 1.15,
+        duration: 0.875,
+        ease: "linear",
+      },
+      "<"
+    );
 
-    tl.to(triggerElement, {
-      ease: "none",
-      clipPath: "inset(0% 0% 20% 0%)",
-    }, "<");
+    tl.to(
+      triggerElement,
+      {
+        ease: "none",
+        clipPath: "inset(0% 0% 20% 0%)",
+      },
+      "<"
+    );
 
     tl.to(
       headingSplit.lines,
