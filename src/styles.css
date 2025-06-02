@@ -254,3 +254,33 @@
 .form-submit__small:hover .btn__icon-svg {
   transform: translateX(2.5rem);
 }
+
+/* ---------------- Blog ---------------- */
+
+/* Default State */
+
+.blog__img-hover__bg {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.blog__img-hover-content div {
+  transition: transform 0.1s, opacity 0.1s;
+  transform: translateY(1rem);
+  opacity: 0;
+}
+
+/* Hover State */
+@media (hover: hover) and (pointer: fine) {
+  .blog_item:hover .blog__img-hover {
+    visibility: visible;
+  }
+  .blog_item:hover .blog__img-hover__bg {
+    opacity: 0.6;
+  }
+  .blog_item:hover .blog__img-hover-content div {
+    transform: translateY(0rem);
+    transition: transform 0.6s var(--elastic-ease-out), opacity 0.3s;
+    opacity: 1;
+  }
+}
