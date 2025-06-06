@@ -1,6 +1,7 @@
 import studioFreightlenis from "https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/+esm";
 
 $(document).ready(function () {
+  console.log("ready");
   gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 
   const lenis = new studioFreightlenis();

@@ -284,3 +284,16 @@
     opacity: 1;
   }
 }
+
+/* Sizing */
+
+[data-news-item]:first-child {
+  flex: calc(33.3333% * 2);
+  max-width: calc(33.3333% * 2);
+}
+
+[data-news-item]:nth-child(odd) {
+  flex: calc(33.3333% * 2);
+  max-width: calc(33.3333% * 2);
+}
+
