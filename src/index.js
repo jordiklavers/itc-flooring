@@ -64,7 +64,7 @@ function initDetectScrollingDirection() {
 
 function initScrollTriggerAnimations() {
   // ---- GLOBAL SCROLL ANIMATIONS ---- //
-  $('[data-animate="lines"]').each(function () {
+  $('[data-animate="lines"]').eacgith(function () {
     let triggerElement = $(this);
 
     let tl = gsap.timeline({
